@@ -1,12 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal'
 
+const styles = { color: "#0d56d4" }
 const Button = (props) => {
     return (
         <>
-            <div className="p-4 bg-black mt-4">
-                <button className="w-full bg-pink-500 text-white font-bold  py-2 px-12 rounded" >BUY</button>
-            </div>
+
+            <button style={styles} >BUY</button>
+
             {/* <button className={`btn btn--${props.kind} CTA`}
                 data-id={props.id}
                 type={props.type}
