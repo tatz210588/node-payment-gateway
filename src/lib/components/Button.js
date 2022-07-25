@@ -5,7 +5,7 @@ import { getTokenByChain } from "./tokenConfig";
 import PhoneLink from "./PhoneLink.json";
 import toast, { Toaster } from "react-hot-toast";
 
-const Button = (props) => {
+const PayWithCrypto = (props) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedToken, setSelectedToken] = useState(null);
 
@@ -28,24 +28,32 @@ const Button = (props) => {
       console.log("sds");
       const tx = await tokenContract
         .transfer(props.ownerAddress, etherAmount)
+        .then(() => {
+          toast("Payment in progress... Please Wait", { icon: "👏" });
+          provider.waitForTransaction(tx.hash, 1, 150000).then(() => {
+            toast.success("Payment Completed.");
+          });
+        })
         .catch((e) => {
-          console.log(e.data.message);
+          toast.error(e.reason);
         }); //transfers tokens from msg.sender to destination wallet
-      toast("Payment in progress... Please Wait", { icon: "👏" });
-      await provider.waitForTransaction(tx.hash, 1, 150000).then(() => {
-        toast.success("Payment Completed.");
-      });
     } else {
       //for native coin
       console.log("test", token.address);
-      const tx = await signer.sendTransaction({
-        to: props.ownerAddress, //destination wallet address
-        value: etherAmount, // amount of native token to be sent
-      });
-      toast("Payment in progress... Please Wait", { icon: "👏" });
-      await provider.waitForTransaction(tx.hash, 1, 150000).then(() => {
-        toast.success("Payment Completed.");
-      });
+      const tx = await signer
+        .sendTransaction({
+          to: props.ownerAddress, //destination wallet address
+          value: etherAmount, // amount of native token to be sent
+        })
+        .then(() => {
+          toast("Payment in progress... Please Wait", { icon: "👏" });
+          provider.waitForTransaction(tx.hash, 1, 150000).then(() => {
+            toast.success("Payment Completed.");
+          });
+        })
+        .catch((e) => {
+          toast.error(e.message);
+        });
     }
   }
 
@@ -74,10 +82,13 @@ const Button = (props) => {
           </div>
         )}
       />
-      <button className={`btn btn-primary CTA`} onClick={payNow(selectedToken)}>
+      <button
+        className={`btn btn-primary CTA`}
+        onClick={() => payNow(selectedToken)}
+      >
         <h4>{props.label}</h4>
       </button>
     </>
   );
 };
-export default Button;
+export default PayWithCrypto;

@@ -1,13 +1,5 @@
-export type TokenInfo = {
-  name: string;
-  address: string;
-  symbol: string;
-  token_icon: string;
-  decimal: number;
-};
-
-const tokenConfig: Record<number, TokenInfo[]> = {
-  "80001": [
+const tokenConfig = {
+  80001: [
     {
       name: "MATIC",
       address: "null",
@@ -23,7 +15,7 @@ const tokenConfig: Record<number, TokenInfo[]> = {
       decimal: 6,
     },
   ],
-  "4": [
+  4: [
     {
       name: "ETH",
       address: "null",
@@ -32,7 +24,7 @@ const tokenConfig: Record<number, TokenInfo[]> = {
       decimal: 18,
     },
   ],
-  "242": [
+  242: [
     {
       name: "KAI",
       address: "null",
@@ -42,7 +34,7 @@ const tokenConfig: Record<number, TokenInfo[]> = {
       decimal: 18,
     },
   ],
-  "137": [
+  137: [
     {
       name: "MATIC",
       address: "null",
@@ -102,7 +94,7 @@ const tokenConfig: Record<number, TokenInfo[]> = {
       decimal: 18,
     },
   ],
-  "24": [
+  24: [
     {
       name: "GrowLimitLess",
       address: "0xE14F49b259863Bc9E3264d1909444EaF82528DcD",
@@ -142,4 +134,4 @@ const tokenConfig: Record<number, TokenInfo[]> = {
   ],
 };
 
-export const getTokenByChain = (chain: number) => tokenConfig[chain];
+export const getTokenByChain = (chain) => tokenConfig[chain];
