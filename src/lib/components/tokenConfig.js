@@ -1,6 +1,7 @@
 const tokenConfig = {
   80001: [
     {
+      value: 1,
       name: "MATIC",
       address: "null",
       symbol: "MATIC",
@@ -8,6 +9,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 2,
       name: "USD Tether",
       address: "0xA02f6adc7926efeBBd59Fd43A84f4E0c0c91e832",
       symbol: "USDT",
@@ -17,6 +19,7 @@ const tokenConfig = {
   ],
   4: [
     {
+      value: 1,
       name: "ETH",
       address: "null",
       symbol: "ETH",
@@ -26,6 +29,7 @@ const tokenConfig = {
   ],
   242: [
     {
+      value: 1,
       name: "KAI",
       address: "null",
       symbol: "KAI",
@@ -36,6 +40,7 @@ const tokenConfig = {
   ],
   137: [
     {
+      value: 1,
       name: "MATIC",
       address: "null",
       symbol: "MATIC",
@@ -43,6 +48,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 2,
       name: "GrowLimitLess",
       address: "0x42CC424D6a821058C29105f57c409d40991FB316",
       symbol: "GLL",
@@ -50,6 +56,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 3,
       name: "USDT",
       address: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
       symbol: "USDT",
@@ -57,6 +64,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 4,
       name: "USDC",
       address: "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
       symbol: "USDC",
@@ -64,6 +72,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 5,
       name: "BNB",
       address: "0x3BA4c387f786bFEE076A58914F5Bd38d668B42c3",
       symbol: "BNB",
@@ -71,6 +80,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 6,
       name: "BUSD",
       address: "0xdAb529f40E671A1D4bF91361c21bf9f0C9712ab7",
       symbol: "BUSD",
@@ -79,6 +89,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 7,
       name: "DAI",
       address: "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
       symbol: "DAI",
@@ -87,6 +98,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 8,
       name: "UniSwap",
       address: "0xb33EaAd8d922B1083446DC23f610c2567fB5180f",
       symbol: "UNI",
@@ -96,6 +108,7 @@ const tokenConfig = {
   ],
   24: [
     {
+      value: 1,
       name: "GrowLimitLess",
       address: "0xE14F49b259863Bc9E3264d1909444EaF82528DcD",
       symbol: "GLL",
@@ -103,6 +116,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 2,
       name: "KAI",
       address: "null",
       symbol: "KAI",
@@ -111,6 +125,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 3,
       name: "USD Tether",
       address: "0x551A5dcAC57C66aA010940c2dcFf5DA9c53aa53b",
       symbol: "USDT",
@@ -118,6 +133,7 @@ const tokenConfig = {
       decimal: 6,
     },
     {
+      value: 4,
       name: "KUSD-T",
       address: "0x92364Ec610eFa050D296f1EEB131f2139FB8810e",
       symbol: "KUSD-T",
@@ -125,6 +141,7 @@ const tokenConfig = {
       decimal: 18,
     },
     {
+      value: 5,
       name: "KAIDEX LP Tokens",
       address: "0x1eBbF8080149FF07381AFd148bA0AF007f78cD3c",
       symbol: "KLP",
