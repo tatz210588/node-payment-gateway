@@ -69,25 +69,63 @@ const PayWithCrypto = (props) => {
 
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false} />
-      <Select
-        placeholder="Select Your Token"
-        value={selectedOption}
-        options={getTokenByChain(Number(props.chainId))}
-        onChange={handleChange}
-        getOptionLabel={(e) => (
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img width={30} height={30} alt="" src={e.token_icon} />
-            <span style={{ marginLeft: 15 }}>{e.symbol}</span>
-          </div>
-        )}
-      />
-      <button
-        className={`btn btn-primary CTA`}
-        onClick={() => payNow(selectedToken)}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          fontSize: "50%",
+          width: "100%",
+        }}
       >
-        <h4>{props.label}</h4>
-      </button>
+        <Toaster position="top-center" reverseOrder={false} />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          fontSize: "70%",
+          width: "100%",
+        }}
+      >
+        <div style={{ height: 30, width: "100%" }}>
+          <Select
+            placeholder="Select Your Token"
+            value={selectedOption}
+            options={getTokenByChain(Number(props.chainId))}
+            onChange={handleChange}
+            getOptionLabel={(e) => (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "70%",
+                }}
+              >
+                <img width={30} height={30} alt="" src={e.token_icon} />
+                <span style={{ marginLeft: 15 }}>{e.symbol}</span>
+              </div>
+            )}
+          />
+        </div>
+
+        <button
+          style={{
+            marginLeft: 15,
+            padding: "10px",
+            color: "white",
+            fontWeight: "bold",
+            borderRadius: "10px",
+            width: 100,
+            cursor: "pointer",
+            backgroundColor: "#df3deb",
+          }}
+          className={`btn btn-primary CTA`}
+          onClick={() => payNow(selectedToken)}
+        >
+          {props.label}
+        </button>
+      </div>
     </>
   );
 };
