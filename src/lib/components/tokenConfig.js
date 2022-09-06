@@ -37,6 +37,14 @@ const tokenConfig = {
         "https://ipfs.infura.io/ipfs/QmV91sx1aWr2RhzF3LRq5M1qoGvYURaqTtsKjF3kiE88Xw",
       decimal: 18,
     },
+    {
+      value: 2,
+      name: "LoloCoin",
+      address: "0xcfc79FbccA6Fbf87f3bEB336C7608F09DE4B46D7",
+      symbol: "LOLO",
+      token_icon: "https://svgshare.com/i/jVw.svg",
+      decimal: 18,
+    },
   ],
   137: [
     {
@@ -138,14 +146,6 @@ const tokenConfig = {
       address: "0x92364Ec610eFa050D296f1EEB131f2139FB8810e",
       symbol: "KUSD-T",
       token_icon: "https://i.im.ge/2022/07/25/FI3qpX.png",
-      decimal: 18,
-    },
-    {
-      value: 5,
-      name: "KAIDEX LP Tokens",
-      address: "0x1eBbF8080149FF07381AFd148bA0AF007f78cD3c",
-      symbol: "KLP",
-      token_icon: "https://svgshare.com/i/jWH.svg",
       decimal: 18,
     },
   ],
